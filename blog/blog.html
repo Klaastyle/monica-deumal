@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Mónica Deumal - Artículos y recursos sobre derecho penal, defensa criminal, DUI, delitos de drogas y más. Actualizado por una ex Fiscal del Estado.">
+    <meta name="keywords" content="blog derecho penal, artículos abogada, defensa criminal, DUI, delitos de drogas, Mónica Deumal blog">
+    <title>Blog | Mónica Deumal - Abogada Penalista</title>
+
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../i18n.css">
+    <link rel="stylesheet" href="blog.css">
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+</head>
+<body>
+
+    <!-- ==========================================================================
+       CABECERA Y NAVEGACIÓN
+       ========================================================================== -->
+    <header class="main-header" id="main-header">
+        <div class="nav-container">
+            <a href="../index.html" class="logo-wrapper" id="nav-logo" aria-label="Volver al inicio">
+                <span class="logo-icon" aria-hidden="true">⚖️</span>
+                <span class="logo-text">DEUMAL</span>
+            </a>
+
+            <nav aria-label="Menú principal">
+                <ul class="nav-menu">
+                    <li><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="../index.html#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="../index.html#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="../index.html#despacho" class="nav-link">Despacho</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-cta">
+                <div id="lang-switcher" class="lang-switcher" aria-label="Seleccionar idioma"></div>
+                <div class="nav-phone">
+                    <span>CITAS 24/7</span>
+                    <a href="tel:775463725" id="nav-phone-num">775 463 725</a>
+                </div>
+                <a href="contacto.html" class="btn btn-primary" style="padding: 10px 20px; font-size: 0.85rem;">Consulta Gratis</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ==========================================================================
+           HERO DEL BLOG
+           ========================================================================== -->
+        <section class="blog-hero">
+            <div class="blog-hero-content">
+                <span class="section-tag">Recursos Jurídicos</span>
+                <h1 class="blog-hero-title">Blog de Derecho Penal</h1>
+                <p class="blog-hero-desc">Artículos, guías y análisis jurídicos escritos por Mónica Deumal y su equipo de expertos. Información legal clara y accesible.</p>
+
+                <!-- Filtros de categoría -->
+                <div class="blog-filters" role="tablist" aria-label="Filtrar artículos por categoría">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+                    <button class="filter-btn" data-filter="dui" role="tab" aria-selected="false">DUI & Tráfico</button>
+                    <button class="filter-btn" data-filter="drogas" role="tab" aria-selected="false">Delitos de Drogas</button>
+                    <button class="filter-btn" data-filter="violencia" role="tab" aria-selected="false">Violencia Doméstica</button>
+                    <button class="filter-btn" data-filter="empresarial" role="tab" aria-selected="false">Derecho Empresarial</button>
+                    <button class="filter-btn" data-filter="general" role="tab" aria-selected="false">Penal General</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           ARTÍCULO DESTACADO
+           ========================================================================== -->
+        <section class="blog-featured-section">
+            <div class="blog-container">
+                <article class="blog-featured-card" data-category="dui">
+                    <div class="featured-badge">⭐ Artículo Destacado</div>
+                    <div class="featured-content">
+                        <div class="featured-text">
+                            <div class="blog-meta">
+                                <span class="blog-category dui">DUI & Tráfico</span>
+                                <span class="blog-date">📅 8 de julio, 2026</span>
+                                <span class="blog-read-time">⏱ 7 min de lectura</span>
+                            </div>
+                            <h2 class="featured-title">Qué hacer si te detienen por conducción bajo los efectos del alcohol: guía paso a paso</h2>
+                            <p class="featured-excerpt">Ser detenido por DUI es una situación estresante. Conocer tus derechos y actuar correctamente desde el primer momento puede marcar la diferencia entre una condena y una absolución. Esta guía te explica exactamente qué hacer.</p>
+                            <div class="featured-author">
+                                <img src="../assets/monica_deumal_portrait.jpg" alt="Mónica Deumal" class="author-avatar">
+                                <div>
+                                    <strong>Mónica Deumal</strong>
+                                    <span>Abogada Penalista · Ex Fiscal del Estado</span>
+                                </div>
+                            </div>
+                            <a href="#articulo-dui" class="btn btn-primary blog-read-btn">Leer artículo completo →</a>
+                        </div>
+                        <div class="featured-image-wrap">
+                            <div class="featured-image-placeholder dui-bg">
+                                <span class="featured-icon">🚗</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           GRID DE ARTÍCULOS
+           ========================================================================== -->
+        <section class="blog-grid-section">
+            <div class="blog-container">
+                <div class="blog-grid" id="blog-grid">
+
+                    <!-- Artículo 1 -->
+                    <article class="blog-card" data-category="drogas">
+                        <div class="blog-card-image drogas-bg">
+                            <span class="blog-card-icon">💊</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-category drogas">Delitos de Drogas</span>
+                                <span class="blog-date">📅 2 jul, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">Posesión de sustancias controladas: diferencias entre delito menor y mayor</h3>
+                            <p class="blog-card-excerpt">Entender la distinción entre simple posesión y posesión con intención de distribución es crucial para tu defensa. Analizamos los factores que determinan los cargos.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-read-time">⏱ 5 min</span>
+                                <a href="#" class="blog-link">Leer más →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 2 -->
+                    <article class="blog-card" data-category="violencia">
+                        <div class="blog-card-image violencia-bg">
+                            <span class="blog-card-icon">🏠</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-category violencia">Violencia Doméstica</span>
+                                <span class="blog-date">📅 25 jun, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">Orden de alejamiento: qué es, cuándo se otorga y cómo impugnarla</h3>
+                            <p class="blog-card-excerpt">Una orden de alejamiento puede tener consecuencias devastadoras: separación familiar, restricciones laborales y consecuencias penales. Conoce tus opciones legales.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-read-time">⏱ 6 min</span>
+                                <a href="#" class="blog-link">Leer más →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 3 -->
+                    <article class="blog-card" data-category="general">
+                        <div class="blog-card-image general-bg">
+                            <span class="blog-card-icon">⚖️</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-category general">Penal General</span>
+                                <span class="blog-date">📅 18 jun, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">El derecho a permanecer en silencio: cómo y cuándo ejercerlo correctamente</h3>
+                            <p class="blog-card-excerpt">El derecho a no declarar contra uno mismo es una de las protecciones más poderosas que tienes. Muchos lo ceden sin saberlo. Descubre cómo protegerte desde el primer momento.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-read-time">⏱ 4 min</span>
+                                <a href="#" class="blog-link">Leer más →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 4 -->
+                    <article class="blog-card" data-category="empresarial">
+                        <div class="blog-card-image empresarial-bg">
+                            <span class="blog-card-icon">🏢</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-category empresarial">Derecho Empresarial</span>
+                                <span class="blog-date">📅 10 jun, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">Fraude empresarial: señales de alerta y cómo proteger tu empresa</h3>
+                            <p class="blog-card-excerpt">Los delitos de cuello blanco pueden afectar a cualquier empresa. Conoce las señales de alerta tempranas y las medidas de compliance que pueden proteger tu negocio y tu reputación.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-read-time">⏱ 8 min</span>
+                                <a href="#" class="blog-link">Leer más →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 5 -->
+                    <article class="blog-card" data-category="dui">
+                        <div class="blog-card-image dui-bg">
+                            <span class="blog-card-icon">🚦</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-category dui">DUI & Tráfico</span>
+                                <span class="blog-date">📅 3 jun, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">¿Puedo rechazar el test de alcoholemia? Consecuencias legales en España</h3>
+                            <p class="blog-card-excerpt">Muchos conductores desconocen sus derechos frente a las pruebas de alcohol. Negarse tiene consecuencias legales específicas. Te explicamos todo lo que necesitas saber antes de decidir.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-read-time">⏱ 5 min</span>
+                                <a href="#" class="blog-link">Leer más →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 6 -->
+                    <article class="blog-card" data-category="general">
+                        <div class="blog-card-image general-bg">
+                            <span class="blog-card-icon">📋</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-category general">Penal General</span>
+                                <span class="blog-date">📅 27 may, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">Cómo elegir un abogado penalista: 7 preguntas clave que debes hacer</h3>
+                            <p class="blog-card-excerpt">No todos los abogados son iguales. La elección correcta puede determinar el resultado de tu caso. Te damos las preguntas exactas que debes hacer antes de contratar tu defensa.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-read-time">⏱ 6 min</span>
+                                <a href="#" class="blog-link">Leer más →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 7 -->
+                    <article class="blog-card" data-category="drogas">
+                        <div class="blog-card-image drogas-bg">
+                            <span class="blog-card-icon">🔬</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-category drogas">Delitos de Drogas</span>
+                                <span class="blog-date">📅 19 may, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">Registros domiciliarios y drogas: cuándo son legales y cómo impugnarlos</h3>
+                            <p class="blog-card-excerpt">Un registro domiciliario sin las garantías legales puede invalidar toda la prueba obtenida. Aprende cuándo un registro es ilegal y cómo puede beneficiar tu defensa penal.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-read-time">⏱ 7 min</span>
+                                <a href="#" class="blog-link">Leer más →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 8 -->
+                    <article class="blog-card" data-category="violencia">
+                        <div class="blog-card-image violencia-bg">
+                            <span class="blog-card-icon">👨‍👧</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-category violencia">Violencia Doméstica</span>
+                                <span class="blog-date">📅 12 may, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">Cargos de violencia doméstica y custodia de hijos: lo que debes saber</h3>
+                            <p class="blog-card-excerpt">Una acusación de violencia doméstica puede afectar directamente tu derecho a la custodia. Analizamos el impacto legal y las estrategias de defensa disponibles para proteger tu relación con tus hijos.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-read-time">⏱ 8 min</span>
+                                <a href="#" class="blog-link">Leer más →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 9 -->
+                    <article class="blog-card" data-category="empresarial">
+                        <div class="blog-card-image empresarial-bg">
+                            <span class="blog-card-icon">💼</span>
+                        </div>
+                        <div class="blog-card-body">
+                            <div class="blog-meta">
+                                <span class="blog-category empresarial">Derecho Empresarial</span>
+                                <span class="blog-date">📅 5 may, 2026</span>
+                            </div>
+                            <h3 class="blog-card-title">Responsabilidad penal del administrador de empresa: límites y protección</h3>
+                            <p class="blog-card-excerpt">Los administradores de sociedades pueden ser imputados personalmente por delitos cometidos en nombre de la empresa. Conoce los límites de tu responsabilidad y cómo protegerte.</p>
+                            <div class="blog-card-footer">
+                                <span class="blog-read-time">⏱ 9 min</span>
+                                <a href="#" class="blog-link">Leer más →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Paginación -->
+                <div class="blog-pagination">
+                    <button class="page-btn active" aria-current="page">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <span class="page-dots">···</span>
+                    <button class="page-btn">8</button>
+                    <button class="page-next">Siguiente →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+           CTA NEWSLETTER
+           ========================================================================== -->
+        <section class="blog-newsletter">
+            <div class="newsletter-card">
+                <div class="newsletter-icon">📬</div>
+                <h2 class="newsletter-title">Recibe actualizaciones legales en tu correo</h2>
+                <p class="newsletter-desc">Suscríbete a nuestro boletín jurídico. Artículos exclusivos, cambios en la legislación y consejos prácticos de Mónica Deumal directamente en tu bandeja de entrada.</p>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary newsletter-btn">Suscribirme</button>
+                </form>
+                <p class="newsletter-disclaimer">Sin spam. Cancela cuando quieras. Máximo 2 correos al mes.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==========================================================================
+       PIE DE PÁGINA
+       ========================================================================== -->
+    <footer class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <div class="logo-wrapper">
+                    <span class="logo-icon">⚖️</span>
+                    <span class="logo-text">DEUMAL</span>
+                </div>
+                <p>Bufete líder en defensa penal criminal. Protección legal comprometida con la excelencia y la ética en cada caso.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Páginas</h4>
+                <ul class="footer-links-list">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../index.html#nosotros">Nosotros</a></li>
+                    <li><a href="../index.html#servicios">Servicios</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contacto 24/7</h4>
+                <ul class="footer-contact-info">
+                    <li><span>Tel:</span> <a href="tel:775463725" style="color: var(--gold); font-weight: 600;">775 463 725</a></li>
+                    <li><span>📍</span> Consulta remota e híbrida disponible.</li>
+                    <li><span>🕐</span> Soporte legal ininterrumpido 24 horas.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-disclaimer">
+            <p>La información contenida en este sitio web tiene únicamente fines informativos de carácter general. Nada en este sitio debe interpretarse como asesoramiento legal formal para ningún caso o situación en particular.</p>
+            <div class="footer-compliance">
+                <p class="copyright-text">© All Rights Reserved.</p>
+                <p class="dev-by-text">Sitio web desarrollado por:</p>
+                <div class="compliance-logo-wrapper">
+                    <a href="https://mejorakitdigital.com" target="_blank" rel="noopener noreferrer">
+                        <img src="../assets/mejora_kit_digital.png" alt="Mejora Kit Digital" class="compliance-logo-mejora">
+                    </a>
+                </div>
+                <div class="compliance-logo-wrapper">
+                    <img src="../assets/logos_financiacion.png" alt="Financiado por la Unión Europea - NextGenerationEU" class="compliance-logo-ue">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../i18n.js" defer></script>
+    <script src="blog.js" defer></script>
+</body>
+</html>
