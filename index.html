@@ -9,6 +9,7 @@
     
     <!-- Hojas de estilos y tipografía -->
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="i18n.css">
     
     <!-- Favicon (Ícono de balanza de la justicia) -->
     <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
@@ -27,20 +28,23 @@
             
             <nav aria-label="Menú principal">
                 <ul class="nav-menu">
-                    <li><a href="#" class="nav-link active">Inicio</a></li>
-                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
-                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                    <li><a href="#despacho" class="nav-link">Despacho</a></li>
-                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#" class="nav-link active" data-i18n="nav_inicio">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link" data-i18n="nav_nosotros">Nosotros</a></li>
+                    <li><a href="#servicios" class="nav-link" data-i18n="nav_servicios">Servicios</a></li>
+                    <li><a href="#despacho" class="nav-link" data-i18n="nav_despacho">Despacho</a></li>
+                    <li><a href="#contacto" class="nav-link" data-i18n="nav_contacto">Contacto</a></li>
                 </ul>
             </nav>
             
             <div class="nav-cta">
+                <!-- Selector de idioma -->
+                <div id="lang-switcher" class="lang-switcher" aria-label="Seleccionar idioma"></div>
+
                 <div class="nav-phone">
-                    <span>CITAS 24/7</span>
+                    <span data-i18n="nav_phone_label">CITAS 24/7</span>
                     <a href="tel:775463725" id="nav-phone-num">775 463 725</a>
                 </div>
-                <a href="#contacto" class="btn btn-primary" id="nav-cta-btn" style="padding: 10px 20px; font-size: 0.85rem;">Consulta Gratis</a>
+                <a href="#contacto" class="btn btn-primary" id="nav-cta-btn" style="padding: 10px 20px; font-size: 0.85rem;" data-i18n="nav_cta">Consulta Gratis</a>
             </div>
         </div>
     </header>
@@ -51,14 +55,14 @@
            ========================================================================== -->
         <header class="hero" id="inicio">
             <div class="hero-content">
-                <span class="section-tag" id="hero-tag">Ex Fiscal del Estado</span>
-                <h1 class="hero-title" id="hero-main-title">Usted merece la mejor defensa posible</h1>
-                <p class="hero-description" id="hero-desc">
+                <span class="section-tag" id="hero-tag" data-i18n="hero_tag">Ex Fiscal del Estado</span>
+                <h1 class="hero-title" id="hero-main-title" data-i18n="hero_title">Usted merece la mejor defensa posible</h1>
+                <p class="hero-description" id="hero-desc" data-i18n="hero_desc">
                     Deje que una abogada experta y ex fiscal luche agresivamente por usted en los tribunales para proteger sus derechos y asegurar su futuro.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contacto" class="btn btn-primary" id="hero-btn-primary">Consulta Gratuita</a>
-                    <a href="#nosotros" class="btn btn-secondary" id="hero-btn-secondary">Conocer a Mónica Deumal</a>
+                    <a href="#contacto" class="btn btn-primary" id="hero-btn-primary" data-i18n="hero_btn_primary">Consulta Gratuita</a>
+                    <a href="#nosotros" class="btn btn-secondary" id="hero-btn-secondary" data-i18n="hero_btn_secondary">Conocer a Mónica Deumal</a>
                 </div>
             </div>
             
@@ -75,42 +79,39 @@
            ========================================================================== -->
         <section class="about-section" id="nosotros">
             <div class="about-content">
-                <span class="section-tag" id="about-tag">Perfil Profesional</span>
-                <h2 class="section-title" id="about-title">Mónica Deumal<br><span>Defense Lawyer</span></h2>
+                <span class="section-tag" id="about-tag" data-i18n="about_tag">Perfil Profesional</span>
+                <h2 class="section-title" id="about-title">
+                    <span data-i18n="about_title_1">Mónica Deumal</span><br>
+                    <span data-i18n="about_title_2">Defense Lawyer</span>
+                </h2>
                 <div class="about-text">
-                    <p>
-                        <strong>Mónica Deumal Abogada Defensora</strong> es un bufete de abogados de defensa criminal líder, dedicado a proteger la libertad de nuestros clientes y a perseguir implacablemente la justicia en cada caso.
-                    </p>
-                    <p>
-                        Con años de experiencia en el campo del derecho penal y habiendo ejercido anteriormente como fiscal de la acusación pública, contamos con una perspectiva integral única: conocemos a fondo cómo piensa el fiscal y cómo construyen sus acusaciones. Esto nos permite diseñar estrategias defensivas altamente efectivas en juicio, apelaciones y litigación compleja.
-                    </p>
-                    <p>
-                        Nos destacamos por un trato personalizado, evaluando rigurosamente cada caso y manteniendo una comunicación clara y transparente. Si estás enfrentando cargos criminales, necesitas una defensa sólida, decidida y de alta calidad técnica.
-                    </p>
+                    <p data-i18n="about_p1"><strong>Mónica Deumal Abogada Defensora</strong> es un bufete de abogados de defensa criminal líder, dedicado a proteger la libertad de nuestros clientes y a perseguir implacablemente la justicia en cada caso.</p>
+                    <p data-i18n="about_p2">Con años de experiencia en el campo del derecho penal y habiendo ejercido anteriormente como fiscal de la acusación pública, contamos con una perspectiva integral única: conocemos a fondo cómo piensa el fiscal y cómo construyen sus acusaciones. Esto nos permite diseñar estrategias defensivas altamente efectivas en juicio, apelaciones y litigación compleja.</p>
+                    <p data-i18n="about_p3">Nos destacamos por un trato personalizado, evaluando rigurosamente cada caso y manteniendo una comunicación clara y transparente. Si estás enfrentando cargos criminales, necesitas una defensa sólida, decidida y de alta calidad técnica.</p>
                 </div>
             </div>
             
-            <div class="contact-form-container">
+            <div class="contact-form-container" id="contacto">
                 <div class="contact-card">
-                    <h3 class="serif-font" id="form-title">Consulta Gratuita</h3>
+                    <h3 class="serif-font" id="form-title" data-i18n="form_title">Consulta Gratuita</h3>
                     <form id="contact-form" aria-label="Formulario de consulta gratuita">
                         <div class="form-group">
                             <label for="form-name" class="elementor-screen-only" style="display:none;">Nombre</label>
-                            <input type="text" id="form-name" class="form-control" placeholder="Nombre completo" required>
+                            <input type="text" id="form-name" class="form-control" placeholder="Nombre completo" data-i18n="form_name" required>
                         </div>
                         <div class="form-group">
                             <label for="form-email" class="elementor-screen-only" style="display:none;">Email</label>
-                            <input type="email" id="form-email" class="form-control" placeholder="Correo electrónico" required>
+                            <input type="email" id="form-email" class="form-control" placeholder="Correo electrónico" data-i18n="form_email" required>
                         </div>
                         <div class="form-group">
                             <label for="form-phone" class="elementor-screen-only" style="display:none;">Teléfono</label>
-                            <input type="tel" id="form-phone" class="form-control" placeholder="Teléfono de contacto">
+                            <input type="tel" id="form-phone" class="form-control" placeholder="Teléfono de contacto" data-i18n="form_phone">
                         </div>
                         <div class="form-group">
                             <label for="form-message" class="elementor-screen-only" style="display:none;">Mensaje</label>
-                            <textarea id="form-message" class="form-control" placeholder="Cuéntenos los detalles de su caso..." required></textarea>
+                            <textarea id="form-message" class="form-control" placeholder="Cuéntenos los detalles de su caso..." data-i18n="form_message" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" id="submit-btn" style="width: 100%;">Enviar Mensaje</button>
+                        <button type="submit" class="btn btn-primary" id="submit-btn" style="width: 100%;" data-i18n="form_submit">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
@@ -121,8 +122,8 @@
            ========================================================================== -->
         <section id="servicios">
             <div style="text-align: center; margin-bottom: 50px;">
-                <span class="section-tag" id="services-tag">Áreas de Práctica Jurídica</span>
-                <h2 class="section-title" id="services-title">Defensa Penal Especializada</h2>
+                <span class="section-tag" id="services-tag" data-i18n="services_tag">Áreas de Práctica Jurídica</span>
+                <h2 class="section-title" id="services-title" data-i18n="services_title">Defensa Penal Especializada</h2>
             </div>
             
             <div class="practice-grid" id="practice-grid">
@@ -130,8 +131,8 @@
                 <article class="practice-card" id="practice-1">
                     <div class="practice-content">
                         <div class="practice-icon" aria-hidden="true">🚗</div>
-                        <h3>Delitos de Conducción</h3>
-                        <p>Defensa experta en cargos de DUI, conducción bajo los efectos de sustancias y multas de tráfico severas. Ayudamos a proteger tu licencia y evitar cargos penales permanentes.</p>
+                        <h3 data-i18n="service1_title">Delitos de Conducción</h3>
+                        <p data-i18n="service1_desc">Defensa experta en cargos de DUI, conducción bajo los efectos de sustancias y multas de tráfico severas. Ayudamos a proteger tu licencia y evitar cargos penales permanentes.</p>
                     </div>
                 </article>
 
@@ -139,8 +140,8 @@
                 <article class="practice-card" id="practice-2">
                     <div class="practice-content">
                         <div class="practice-icon" aria-hidden="true">💊</div>
-                        <h3>Delitos de Drogas</h3>
-                        <p>Representación estratégica ante acusaciones de posesión, distribución, tráfico o fabricación. Garantizamos el debido proceso y la protección total de tus derechos constitucionales.</p>
+                        <h3 data-i18n="service2_title">Delitos de Drogas</h3>
+                        <p data-i18n="service2_desc">Representación estratégica ante acusaciones de posesión, distribución, tráfico o fabricación. Garantizamos el debido proceso y la protección total de tus derechos constitucionales.</p>
                     </div>
                 </article>
 
@@ -148,8 +149,8 @@
                 <article class="practice-card" id="practice-3">
                     <div class="practice-content">
                         <div class="practice-icon" aria-hidden="true">🏠</div>
-                        <h3>Violencia Doméstica</h3>
-                        <p>Brindamos una representación rigurosa pero compasiva ante cargos familiares o de pareja, evaluando órdenes de alejamiento y posibles consecuencias en la custodia de menores.</p>
+                        <h3 data-i18n="service3_title">Violencia Doméstica</h3>
+                        <p data-i18n="service3_desc">Brindamos una representación rigurosa pero compasiva ante cargos familiares o de pareja, evaluando órdenes de alejamiento y posibles consecuencias en la custodia de menores.</p>
                     </div>
                 </article>
 
@@ -157,8 +158,8 @@
                 <article class="practice-card" id="practice-4">
                     <div class="practice-content">
                         <div class="practice-icon" aria-hidden="true">🕵️‍♂️</div>
-                        <h3>Derecho Penal General</h3>
-                        <p>Representación integral en delitos graves y menores. Desde asaltos y robos hasta fraude, litigación compleja y procedimientos de apelación o limpieza de antecedentes penales.</p>
+                        <h3 data-i18n="service4_title">Derecho Penal General</h3>
+                        <p data-i18n="service4_desc">Representación integral en delitos graves y menores. Desde asaltos y robos hasta fraude, litigación compleja y procedimientos de apelación o limpieza de antecedentes penales.</p>
                     </div>
                 </article>
 
@@ -166,8 +167,8 @@
                 <article class="practice-card" id="practice-5">
                     <div class="practice-content">
                         <div class="practice-icon" aria-hidden="true">⚖️</div>
-                        <h3>Derecho Empresarial</h3>
-                        <p>Defensa en delitos de cuello blanco, fraude corporativo, disputas legales y asesoramiento de cumplimiento normativo para proteger y asegurar el patrimonio de las empresas.</p>
+                        <h3 data-i18n="service5_title">Derecho Empresarial</h3>
+                        <p data-i18n="service5_desc">Defensa en delitos de cuello blanco, fraude corporativo, disputas legales y asesoramiento de cumplimiento normativo para proteger y asegurar el patrimonio de las empresas.</p>
                     </div>
                 </article>
 
@@ -175,8 +176,8 @@
                 <article class="practice-card" id="practice-6">
                     <div class="practice-content">
                         <div class="practice-icon" aria-hidden="true">🎓</div>
-                        <h3>Derecho Educativo</h3>
-                        <p>Protección y defensa legal de los derechos de estudiantes, educadores y centros académicos ante expedientes disciplinarios, acoso escolar y normativas del sector educativo.</p>
+                        <h3 data-i18n="service6_title">Derecho Educativo</h3>
+                        <p data-i18n="service6_desc">Protección y defensa legal de los derechos de estudiantes, educadores y centros académicos ante expedientes disciplinarios, acoso escolar y normativas del sector educativo.</p>
                     </div>
                 </article>
             </div>
@@ -189,19 +190,19 @@
             <div class="stats-grid">
                 <div class="stat-item" id="stat-1">
                     <div class="stat-number" data-target="95" data-suffix="%">0%</div>
-                    <div class="stat-label">Casos Ganados</div>
+                    <div class="stat-label" data-i18n="stat1_label">Casos Ganados</div>
                 </div>
                 <div class="stat-item" id="stat-2">
                     <div class="stat-number" data-target="135" data-suffix="+">0+</div>
-                    <div class="stat-label">Abogado Dedicado</div>
+                    <div class="stat-label" data-i18n="stat2_label">Abogado Dedicado</div>
                 </div>
                 <div class="stat-item" id="stat-3">
                     <div class="stat-number" data-target="257" data-suffix="">0</div>
-                    <div class="stat-label">Clientes de Confianza</div>
+                    <div class="stat-label" data-i18n="stat3_label">Clientes de Confianza</div>
                 </div>
                 <div class="stat-item" id="stat-4">
                     <div class="stat-number" data-target="23" data-suffix="%">0%</div>
-                    <div class="stat-label">Casos Desestimados</div>
+                    <div class="stat-label" data-i18n="stat4_label">Casos Desestimados</div>
                 </div>
             </div>
         </section>
@@ -215,18 +216,18 @@
             </div>
             
             <div class="office-content">
-                <span class="section-tag" id="office-tag">Asistencia Inmediata</span>
-                <h2 class="section-title" id="office-title">Un ex fiscal listo para defender tus derechos y tu futuro</h2>
-                <p>
+                <span class="section-tag" id="office-tag" data-i18n="office_tag">Asistencia Inmediata</span>
+                <h2 class="section-title" id="office-title" data-i18n="office_title">Un ex fiscal listo para defender tus derechos y tu futuro</h2>
+                <p id="office-p1" data-i18n="office_p1">
                     En nuestro despacho de abogados nos enfocamos en estructurar defensas robustas ante cargos de diversa gravedad. Conocemos los puntos vulnerables en las investigaciones de la fiscalía y la policía y los usamos a favor de nuestros representados.
                 </p>
                 <div class="practice-list-horizontal">
-                    <div class="practice-list-item">Estrategias de DUI robustas</div>
-                    <div class="practice-list-item">Defensa en delitos de drogas</div>
-                    <div class="practice-list-item">Protección ante violencia doméstica</div>
-                    <div class="practice-list-item">Asistencia legal corporativa</div>
+                    <div class="practice-list-item" data-i18n="office_item1">Estrategias de DUI robustas</div>
+                    <div class="practice-list-item" data-i18n="office_item2">Defensa en delitos de drogas</div>
+                    <div class="practice-list-item" data-i18n="office_item3">Protección ante violencia doméstica</div>
+                    <div class="practice-list-item" data-i18n="office_item4">Asistencia legal corporativa</div>
                 </div>
-                <a href="#contacto" class="btn btn-primary" id="office-cta-btn">Programe su Consulta</a>
+                <a href="#contacto" class="btn btn-primary" id="office-cta-btn" data-i18n="office_cta">Programe su Consulta</a>
             </div>
         </section>
 
@@ -235,31 +236,31 @@
            ========================================================================== -->
         <section id="testimonios">
             <div style="text-align: center; margin-bottom: 50px;">
-                <span class="section-tag" id="testimonials-tag">Testimonios de Clientes</span>
-                <h2 class="section-title" id="testimonials-title">Opiniones y Experiencias</h2>
+                <span class="section-tag" id="testimonials-tag" data-i18n="testimonials_tag">Testimonios de Clientes</span>
+                <h2 class="section-title" id="testimonials-title" data-i18n="testimonials_title">Opiniones y Experiencias</h2>
             </div>
             
             <div class="testimonials-container">
                 <div class="testimonial-slider" id="testimonial-slider">
                     <!-- Testimonio 1 -->
                     <div class="testimonial-slide active">
-                        <p class="testimonial-text">
+                        <p class="testimonial-text" data-i18n="test1_text">
                             "Como CEO, navegar por las complejidades legales es crucial para proteger mi empresa y su futuro. El equipo legal de Mónica Deumal brindó una orientación excepcional, garantizando el cumplimiento normativo y resolviendo desafíos de manera eficiente. Su dedicación ha sido invaluable."
                         </p>
                         <div class="testimonial-author">
-                            John Doe
-                            <span>CEO, Corporación Global</span>
+                            <span data-i18n="test1_author">John Doe</span>
+                            <span data-i18n="test1_role">CEO, Corporación Global</span>
                         </div>
                     </div>
                     
                     <!-- Testimonio 2 -->
                     <div class="testimonial-slide">
-                        <p class="testimonial-text">
+                        <p class="testimonial-text" data-i18n="test2_text">
                             "Dirigir una empresa conlleva desafíos legales constantes, y contar con el respaldo de Mónica Deumal marca la diferencia. Su enfoque estratégico, atención al detalle y compromiso ético con la protección de nuestro negocio han sido sobresalientes. Recomiendo ampliamente sus servicios."
                         </p>
                         <div class="testimonial-author">
-                            Jane Smith
-                            <span>Directora de Operaciones</span>
+                            <span data-i18n="test2_author">Jane Smith</span>
+                            <span data-i18n="test2_role">Directora de Operaciones</span>
                         </div>
                     </div>
                 </div>
@@ -282,39 +283,39 @@
                     <span class="logo-icon">⚖️</span>
                     <span class="logo-text">DEUMAL</span>
                 </div>
-                <p>
+                <p data-i18n="footer_desc">
                     Bufete líder en defensa penal criminal. Protección legal comprometida con la excelencia y la ética en cada caso.
                 </p>
             </div>
             
             <div class="footer-links">
-                <h4>Enlaces Útiles</h4>
+                <h4 data-i18n="footer_links_title">Enlaces Útiles</h4>
                 <ul class="footer-links-list">
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#" data-i18n="nav_inicio">Inicio</a></li>
+                    <li><a href="#nosotros" data-i18n="nav_nosotros">Nosotros</a></li>
+                    <li><a href="#servicios" data-i18n="nav_servicios">Servicios</a></li>
+                    <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
                 </ul>
             </div>
             
             <div class="footer-contact">
-                <h4>Contacto 24/7</h4>
+                <h4 data-i18n="footer_contact_title">Contacto 24/7</h4>
                 <ul class="footer-contact-info">
-                    <li><span>Citas inmediatas:</span> <a href="tel:775463725" style="color: var(--gold); font-weight: 600;">775 463 725</a></li>
-                    <li><span>Ubicación:</span> Consulta remota e híbrida disponible.</li>
-                    <li><span>Horario:</span> Soporte legal ininterrumpido 24 horas.</li>
+                    <li><span>Tel:</span> <a href="tel:775463725" style="color: var(--gold); font-weight: 600;">775 463 725</a></li>
+                    <li><span>📍</span> <span data-i18n="footer_location">Consulta remota e híbrida disponible.</span></li>
+                    <li><span>🕐</span> <span data-i18n="footer_hours">Soporte legal ininterrumpido 24 horas.</span></li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-disclaimer">
-            <p>
+            <p data-i18n="footer_disclaimer">
                 La información contenida en este sitio web tiene únicamente fines informativos de carácter general. Nada en este sitio debe interpretarse como asesoramiento legal formal para ningún caso o situación en particular. La visualización o contacto a través de este portal no crea ni constituye una relación formal de abogado-cliente.
             </p>
             
             <div class="footer-compliance">
                 <p class="copyright-text">© All Rights Reserved.</p>
-                <p class="dev-by-text">Sitio web desarrollado por:</p>
+                <p class="dev-by-text" data-i18n="footer_dev">Sitio web desarrollado por:</p>
                 <div class="compliance-logo-wrapper">
                     <a href="https://mejorakitdigital.com" target="_blank" rel="noopener noreferrer">
                         <img src="assets/mejora_kit_digital.png" alt="Mejora Kit Digital" class="compliance-logo-mejora">
@@ -328,6 +329,7 @@
     </footer>
 
     <!-- Lógica JavaScript -->
+    <script src="i18n.js" defer></script>
     <script src="app.js" defer></script>
 </body>
 </html>
