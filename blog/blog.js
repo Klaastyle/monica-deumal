@@ -1,10 +1,10 @@
 /* ==========================================================================
-   blog.js — Lógica interactiva de la página de Blog
+   blog.js — Lógica interactiva de la página de Blog (Buscador, Filtros y Paginación)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
     initHeaderScroll();
-    initBlogFilters();
+    initBlogEngine();
     initNewsletterForm();
 });
 
@@ -17,37 +17,110 @@ function initHeaderScroll() {
     });
 }
 
-/* ── FILTROS DE CATEGORÍA ──────────────────────────────────────────────── */
-function initBlogFilters() {
+/* ── MOTOR INTERACTIVO DEL BLOG (FILTROS, BÚSQUEDA Y PAGINACIÓN) ────────── */
+function initBlogEngine() {
     const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.blog-card');
+    const searchInput = document.getElementById('blog-search');
+    const cards = Array.from(document.querySelectorAll('.blog-card'));
+    const paginationWrap = document.getElementById('blog-pagination');
+    if (!cards.length) return;
 
+    let currentFilter = 'all';
+    let searchQuery = '';
+    let currentPage = 1;
+    const POSTS_PER_PAGE = 6;
+
+    function getFilteredCards() {
+        return cards.filter(card => {
+            const cat = card.getAttribute('data-category') || '';
+            const matchesCat = (currentFilter === 'all') || (cat === currentFilter);
+            const title = (card.querySelector('.blog-card-title')?.textContent || '').toLowerCase();
+            const excerpt = (card.querySelector('.blog-card-excerpt')?.textContent || '').toLowerCase();
+            const q = searchQuery.toLowerCase().trim();
+            const matchesSearch = !q || title.includes(q) || excerpt.includes(q);
+            return matchesCat && matchesSearch;
+        });
+    }
+
+    function render() {
+        const filtered = getFilteredCards();
+        const totalPages = Math.ceil(filtered.length / POSTS_PER_PAGE) || 1;
+        if (currentPage > totalPages) currentPage = 1;
+
+        const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
+        const endIndex = startIndex + POSTS_PER_PAGE;
+
+        // Ocultar todas las tarjetas primero
+        cards.forEach(card => card.classList.add('hidden'));
+
+        // Mostrar solo el segmento correspondiente a la página activa
+        filtered.slice(startIndex, endIndex).forEach(card => {
+            card.classList.remove('hidden');
+            card.style.animation = 'none';
+            card.offsetHeight; // reflow
+            card.style.animation = 'fadeInUp 0.35s ease forwards';
+        });
+
+        // Actualizar controles de paginación
+        if (paginationWrap) {
+            if (filtered.length <= POSTS_PER_PAGE) {
+                paginationWrap.style.display = 'none';
+            } else {
+                paginationWrap.style.display = 'flex';
+                let html = '';
+                if (currentPage > 1) {
+                    html += `<button class="page-btn page-prev" data-page="${currentPage - 1}" aria-label="Página anterior">←</button>`;
+                }
+                for (let i = 1; i <= totalPages; i++) {
+                    html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}" aria-label="Ir a página ${i}">${i}</button>`;
+                }
+                if (currentPage < totalPages) {
+                    html += `<button class="page-btn page-next" data-page="${currentPage + 1}" aria-label="Página siguiente">Siguiente →</button>`;
+                }
+                paginationWrap.innerHTML = html;
+
+                paginationWrap.querySelectorAll('.page-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const targetPage = parseInt(btn.getAttribute('data-page'), 10);
+                        if (targetPage && targetPage !== currentPage) {
+                            currentPage = targetPage;
+                            render();
+                            const grid = document.getElementById('blog-grid');
+                            if (grid) {
+                                window.scrollTo({
+                                    top: grid.offsetTop - 120,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        }
+                    });
+                });
+            }
+        }
+    }
+
+    // Botones de filtro por categoría
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Actualizar botón activo
             filterBtns.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
             btn.classList.add('active');
             btn.setAttribute('aria-selected', 'true');
-
-            const filter = btn.getAttribute('data-filter');
-
-            // Animar las tarjetas
-            cards.forEach(card => {
-                const category = card.getAttribute('data-category');
-                const matches = filter === 'all' || category === filter;
-
-                if (matches) {
-                    card.style.animation = 'none';
-                    card.classList.remove('hidden');
-                    // Reiniciar animación
-                    card.offsetHeight; // reflow
-                    card.style.animation = 'fadeInUp 0.4s ease forwards';
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
+            currentFilter = btn.getAttribute('data-filter') || 'all';
+            currentPage = 1;
+            render();
         });
     });
+
+    // Búsqueda en vivo
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value;
+            currentPage = 1;
+            render();
+        });
+    }
+
+    render();
 }
 
 /* ── FORMULARIO DE NEWSLETTER ──────────────────────────────────────────── */
@@ -78,11 +151,11 @@ function initNewsletterForm() {
     });
 }
 
-/* ── ANIMACIÓN GLOBAL PARA FILTROS ─────────────────────────────────────── */
+/* ── ANIMACIÓN GLOBAL PARA TRANSICIONES ────────────────────────────────── */
 const style = document.createElement('style');
 style.textContent = `
     @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(18px); }
+        from { opacity: 0; transform: translateY(16px); }
         to   { opacity: 1; transform: translateY(0); }
     }
     @keyframes fadeIn {
